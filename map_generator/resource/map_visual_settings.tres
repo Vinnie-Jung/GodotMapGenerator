@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="MapVisualSettings" format=3 uid="uid://botpu2xa80e7j"]
+
+[ext_resource type="Script" uid="uid://demrsovlkpg27" path="res://addons/map_generator/resource/map_visual_settings.gd" id="1_oym61"]
+[ext_resource type="ArrayMesh" uid="uid://c11fnfwuxlbls" path="res://ground1.tres" id="2_jxj88"]
+[ext_resource type="ArrayMesh" uid="uid://coxpx8f58oqva" path="res://wall.tres" id="3_jxj88"]
+
+[resource]
+script = ExtResource("1_oym61")
+floor_mesh = ExtResource("2_jxj88")
+wall_mesh = ExtResource("3_jxj88")
+metadata/_custom_type_script = "uid://demrsovlkpg27"
