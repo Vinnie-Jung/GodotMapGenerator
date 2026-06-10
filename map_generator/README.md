@@ -127,6 +127,26 @@ You can customize:
 
 ---
 
+
+##  How to Install
+
+### Option 1: Copy into your project
+
+1. Download or clone this repository
+2. Copy the folder into your Godot project:
+
+```
+res://addons/map_generator/
+```
+
+3. Enable the plugin:
+   - Go to `Project > Project Settings > Plugins`
+   - Find **Map Generator**
+   - Set it to **Active**
+
+---
+
+
 ##  Notes
 
 - This tool is meant for procedural generation and prototyping
