@@ -12,7 +12,6 @@ Designed for fast prototyping and flexible level generation directly inside the 
 - Control map shape (open or closed layouts)
 - Add navigation mesh automatically
 - Place props using rule-based logic
-- Use GridMap or Node-based building systems
 - Reproduce maps using seeds
 - Customize visuals with mesh libraries
 
