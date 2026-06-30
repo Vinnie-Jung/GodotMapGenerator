@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="PropRule" format=3 uid="uid://blg6x48c340i0"]
+
+[ext_resource type="Script" uid="uid://bg6hnv2bw0opd" path="res://addons/map_generator/resource/prop_rule.gd" id="1_f4fg5"]
+[ext_resource type="PackedScene" uid="uid://yf4dc80m2lpc" path="res://addons/map_generator/resource/pano.tscn" id="1_uyg05"]
+
+[resource]
+script = ExtResource("1_f4fg5")
+scene = ExtResource("1_uyg05")
+weight = 0.2
+target_tile = 1
+metadata/_custom_type_script = "uid://bg6hnv2bw0opd"

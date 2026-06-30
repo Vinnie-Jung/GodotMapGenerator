@@ -1,0 +1,359 @@
+[gd_scene format=3 uid="uid://bu15e23x50apk"]
+
+[ext_resource type="Script" uid="uid://d2m61c6aicah6" path="res://addons/map_generator/dock/dock.gd" id="1_s30p2"]
+
+[node name="Dock" type="VBoxContainer" unique_id=1019602433]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s30p2")
+
+[node name="HeaderPanel" type="PanelContainer" parent="." unique_id=2042524356]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HeaderMargin" type="MarginContainer" parent="HeaderPanel" unique_id=1630907732]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HeaderVBox" type="VBoxContainer" parent="HeaderPanel/HeaderMargin" unique_id=381685019]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="TitleLabel" type="Label" parent="HeaderPanel/HeaderMargin/HeaderVBox" unique_id=2027221268]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Map Generator"
+autowrap_mode = 3
+
+[node name="DescriptionLabel" type="Label" parent="HeaderPanel/HeaderMargin/HeaderVBox" unique_id=182158808]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Generate modular procedural levels directly inside Godot."
+autowrap_mode = 3
+
+[node name="MainScroll" type="ScrollContainer" parent="." unique_id=563055480]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+follow_focus = true
+horizontal_scroll_mode = 0
+
+[node name="ContentVBox" type="VBoxContainer" parent="MainScroll" unique_id=2077994199]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="MapSection" type="PanelContainer" parent="MainScroll/ContentVBox" unique_id=116869064]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="Margin" type="MarginContainer" parent="MainScroll/ContentVBox/MapSection" unique_id=102456161]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Vbox" type="VBoxContainer" parent="MainScroll/ContentVBox/MapSection/Margin" unique_id=1209354598]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Separator" type="HSeparator" parent="MainScroll/ContentVBox/MapSection/Margin/Vbox" unique_id=443462503]
+layout_mode = 2
+
+[node name="SectionTitle" type="Label" parent="MainScroll/ContentVBox/MapSection/Margin/Vbox" unique_id=1850933050]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Map"
+
+[node name="SizeGrid" type="GridContainer" parent="MainScroll/ContentVBox/MapSection/Margin/Vbox" unique_id=1626516961]
+layout_mode = 2
+theme_override_constants/h_separation = 6
+theme_override_constants/v_separation = 6
+columns = 2
+
+[node name="XLabel" type="Label" parent="MainScroll/ContentVBox/MapSection/Margin/Vbox/SizeGrid" unique_id=1131425764]
+layout_mode = 2
+text = "X:"
+
+[node name="XSpin" type="SpinBox" parent="MainScroll/ContentVBox/MapSection/Margin/Vbox/SizeGrid" unique_id=917938885]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 256.0
+value = 20.0
+rounded = true
+
+[node name="YLabel" type="Label" parent="MainScroll/ContentVBox/MapSection/Margin/Vbox/SizeGrid" unique_id=80514164]
+layout_mode = 2
+text = "Y:"
+
+[node name="YSpin" type="SpinBox" parent="MainScroll/ContentVBox/MapSection/Margin/Vbox/SizeGrid" unique_id=1747618794]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 256.0
+value = 5.0
+rounded = true
+
+[node name="ZLabel" type="Label" parent="MainScroll/ContentVBox/MapSection/Margin/Vbox/SizeGrid" unique_id=1695286893]
+layout_mode = 2
+text = "Z:"
+
+[node name="ZSpin" type="SpinBox" parent="MainScroll/ContentVBox/MapSection/Margin/Vbox/SizeGrid" unique_id=1288318603]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 256.0
+value = 20.0
+rounded = true
+
+[node name="ClosedMapCheck" type="CheckBox" parent="MainScroll/ContentVBox/MapSection/Margin/Vbox" unique_id=1157283848]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "Generate Closed Map"
+
+[node name="CeilingCheck" type="CheckBox" parent="MainScroll/ContentVBox/MapSection/Margin/Vbox" unique_id=660264357]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "Generate Ceilings"
+
+[node name="PropsSection" type="PanelContainer" parent="MainScroll/ContentVBox" unique_id=706627356]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="MainScroll/ContentVBox/PropsSection" unique_id=1071964178]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="MainScroll/ContentVBox/PropsSection/Margin" unique_id=644414764]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Separator" type="HSeparator" parent="MainScroll/ContentVBox/PropsSection/Margin/VBox" unique_id=1482660270]
+layout_mode = 2
+
+[node name="SectionTitle" type="Label" parent="MainScroll/ContentVBox/PropsSection/Margin/VBox" unique_id=871917850]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Props"
+
+[node name="GeneratePropsCheck" type="CheckBox" parent="MainScroll/ContentVBox/PropsSection/Margin/VBox" unique_id=1886962077]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "Generate Props"
+
+[node name="RarityContainer" type="VBoxContainer" parent="MainScroll/ContentVBox/PropsSection/Margin/VBox" unique_id=900142531]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="RarityLabel" type="Label" parent="MainScroll/ContentVBox/PropsSection/Margin/VBox/RarityContainer" unique_id=1653559527]
+layout_mode = 2
+text = "Prop Density"
+
+[node name="RaritySlider" type="HSlider" parent="MainScroll/ContentVBox/PropsSection/Margin/VBox/RarityContainer" unique_id=2004678341]
+unique_name_in_owner = true
+layout_mode = 2
+value = 35.0
+tick_count = 10
+
+[node name="RarityValue" type="Label" parent="MainScroll/ContentVBox/PropsSection/Margin/VBox/RarityContainer" unique_id=1930345180]
+unique_name_in_owner = true
+layout_mode = 2
+text = "35%"
+horizontal_alignment = 2
+
+[node name="PropsInfoLabel" type="Label" parent="MainScroll/ContentVBox/PropsSection/Margin/VBox" unique_id=306245534]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Controls the amount of decorative objects generated in the map."
+autowrap_mode = 3
+
+[node name="NavigationSection" type="PanelContainer" parent="MainScroll/ContentVBox" unique_id=256215017]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="MainScroll/ContentVBox/NavigationSection" unique_id=1232382470]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="MainScroll/ContentVBox/NavigationSection/Margin" unique_id=780985581]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Separator" type="HSeparator" parent="MainScroll/ContentVBox/NavigationSection/Margin/VBox" unique_id=854861985]
+layout_mode = 2
+
+[node name="SectionTitle" type="Label" parent="MainScroll/ContentVBox/NavigationSection/Margin/VBox" unique_id=1020689632]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Navigation"
+
+[node name="GenerateNavigationCheck" type="CheckBox" parent="MainScroll/ContentVBox/NavigationSection/Margin/VBox" unique_id=1613763556]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "Generate Navigation Region"
+
+[node name="NavigationInfoLabel" type="Label" parent="MainScroll/ContentVBox/NavigationSection/Margin/VBox" unique_id=142908504]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Automatically creates navigation data for AI agents and pathfinding."
+autowrap_mode = 3
+
+[node name="SeedSection" type="PanelContainer" parent="MainScroll/ContentVBox" unique_id=993061801]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="MainScroll/ContentVBox/SeedSection" unique_id=613495707]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="MainScroll/ContentVBox/SeedSection/Margin" unique_id=726683777]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Separator" type="HSeparator" parent="MainScroll/ContentVBox/SeedSection/Margin/VBox" unique_id=1390203548]
+layout_mode = 2
+
+[node name="SectionTitle" type="Label" parent="MainScroll/ContentVBox/SeedSection/Margin/VBox" unique_id=1738388512]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Seed"
+
+[node name="SeedHBox" type="HBoxContainer" parent="MainScroll/ContentVBox/SeedSection/Margin/VBox" unique_id=1776877386]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="SeedInput" type="LineEdit" parent="MainScroll/ContentVBox/SeedSection/Margin/VBox/SeedHBox" unique_id=1617318600]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Using the same seed generates the same map."
+text = "999806"
+placeholder_text = "Enter seed..."
+clear_button_enabled = true
+
+[node name="RandomSeedButton" type="Button" parent="MainScroll/ContentVBox/SeedSection/Margin/VBox/SeedHBox" unique_id=411671989]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 0)
+layout_mode = 2
+tooltip_text = "Generate a random seed."
+text = "Random"
+
+[node name="SeedInfoLabel" type="Label" parent="MainScroll/ContentVBox/SeedSection/Margin/VBox" unique_id=388260343]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "The same seed will always reproduce the same map layout."
+autowrap_mode = 3
+
+[node name="GenerationSection" type="PanelContainer" parent="MainScroll/ContentVBox" unique_id=2140603003]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="MainScroll/ContentVBox/GenerationSection" unique_id=1629767403]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="MainScroll/ContentVBox/GenerationSection/Margin" unique_id=1878406339]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Separator" type="HSeparator" parent="MainScroll/ContentVBox/GenerationSection/Margin/VBox" unique_id=439369739]
+layout_mode = 2
+
+[node name="SectionTitle" type="Label" parent="MainScroll/ContentVBox/GenerationSection/Margin/VBox" unique_id=1877490631]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Controls"
+
+[node name="GenerateButton" type="Button" parent="MainScroll/ContentVBox/GenerationSection/Margin/VBox" unique_id=1850556634]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+tooltip_text = "Generate a new procedural map."
+text = "Generate Map"
+
+[node name="RegenerateButton" type="Button" parent="MainScroll/ContentVBox/GenerationSection/Margin/VBox" unique_id=1210152485]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+tooltip_text = "Clear and generate the map again."
+text = "Regenerate"
+
+[node name="ClearButton" type="Button" parent="MainScroll/ContentVBox/GenerationSection/Margin/VBox" unique_id=715486627]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+tooltip_text = "Remove generated content from the scene."
+text = "Clear Map"
+
+[node name="DebugSection" type="PanelContainer" parent="MainScroll/ContentVBox" unique_id=94295996]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="MainScroll/ContentVBox/DebugSection" unique_id=1377929778]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBox" type="VBoxContainer" parent="MainScroll/ContentVBox/DebugSection/Margin" unique_id=598672629]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Separator" type="HSeparator" parent="MainScroll/ContentVBox/DebugSection/Margin/VBox" unique_id=499933835]
+layout_mode = 2
+
+[node name="SectionTitle" type="Label" parent="MainScroll/ContentVBox/DebugSection/Margin/VBox" unique_id=299164876]
+layout_mode = 2
+theme_override_font_sizes/font_size = 18
+text = "Debug"
+
+[node name="GenerationTimeLabel" type="Label" parent="MainScroll/ContentVBox/DebugSection/Margin/VBox" unique_id=231673667]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Generation Time: --"
+
+[node name="RoomCountLabel" type="Label" parent="MainScroll/ContentVBox/DebugSection/Margin/VBox" unique_id=1572425343]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Generated Rooms: --"
+
+[node name="PropsCountLabel" type="Label" parent="MainScroll/ContentVBox/DebugSection/Margin/VBox" unique_id=1347931522]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Generated Props: --"
+
+[node name="StatusLabel" type="Label" parent="MainScroll/ContentVBox/DebugSection/Margin/VBox" unique_id=2019551940]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Status: Idle"
+autowrap_mode = 3

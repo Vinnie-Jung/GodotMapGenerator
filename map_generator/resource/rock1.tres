@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PropRule" format=3 uid="uid://b07wqgfpymw5f"]
+
+[ext_resource type="PackedScene" uid="uid://ioch0wvxnchb" path="res://small_rock.tscn" id="1_3l1uw"]
+[ext_resource type="Script" uid="uid://bg6hnv2bw0opd" path="res://addons/map_generator/resource/prop_rule.gd" id="1_8ityf"]
+
+[resource]
+script = ExtResource("1_8ityf")
+scene = ExtResource("1_3l1uw")
+weight = 0.2
+target_tile = 1
+height_offset = 1
+size = Vector3i(1, 1, 3)
+metadata/_custom_type_script = "uid://bg6hnv2bw0opd"
